@@ -4,8 +4,6 @@ exports.up = function(knex, Promise) {
     table.increments();
     table.string('name');
     table.text('description');
-    table.boolean('is_vegan');
-    table.boolen('is_vege');
   })
 };
 
