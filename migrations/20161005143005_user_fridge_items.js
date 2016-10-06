@@ -4,7 +4,6 @@ exports.up = function(knex, Promise) {
     table.increments();
     table.string('name');
     table.integer('fridge_id').references('user_fridge.id')
-    table.interger('amount');
     table.text('measurement');
   })
 };

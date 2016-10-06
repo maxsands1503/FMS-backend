@@ -4,6 +4,7 @@ exports.up = function(knex, Promise) {
     table.increments();
     table.string('name');
     table.text('description');
+    table.integer('user_id').references('users.id')
   })
 };
 

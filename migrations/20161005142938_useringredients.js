@@ -3,8 +3,7 @@ exports.up = function(knex, Promise) {
   return knex.schema.createTable('useringredients', function(table){
     table.increments();
     table.string('name');
-    table.integer('amount');
-    table.text('measurement');
+    table.text('amount');
     table.integer('recipe_id').references('userrecipes.id')
   })
 };
