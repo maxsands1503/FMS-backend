@@ -1,12 +1,13 @@
 
 exports.up = function(knex, Promise) {
-  return knex.schema.createTable('shared', function(table){
+  return knex.schema.createTable('recipes', function(table){
     table.increments();
+    table.string('name');
+    table.text('instructions');
     table.integer('user_id').references('users.id');
-    table.integer('shared_id').references('users.id');
   })
 };
 
 exports.down = function(knex, Promise) {
-  return knex.schema.dropTableIfExists('shared');
+  return knex.schema.dropTableIfExists('recipes');
 };
